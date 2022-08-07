@@ -57,3 +57,32 @@ html {
     background-color: rgba(200, 200, 200, 0.3);
     border-radius: 0.4rem;
 }
+
+.calculator--container__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.calculator--container__content--field {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.calculator--container__content--legend {
+    letter-spacing: .08rem;
+    text-shadow: .8rem .4rem 1.6rem rgba(0, 0, 0, .7);
+}
+
+.calculator--container__content--input {
+    flex: 1;
+}
+
+.calculator--container__content--legend,
+.calculator--container__content--label,
+.calculator--container__content--input {
+    font-size: 11pt;
+}
