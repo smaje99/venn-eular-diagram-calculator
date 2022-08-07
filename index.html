@@ -65,7 +65,152 @@
                 </fieldset>
             </section>
             <form id="calculator__diagram" class="calculator--container">
-                <span>Aquí se establece el número de elementos entre los conjuntos</span>
+                <fieldset class="calculator--container__content">
+                    <legend class="calculator--container__content--legend">
+                        Elementos de los Conjuntos
+                    </legend>
+
+                    <label for="elementsA" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en el conjunto
+                            <span class="nameSetA">A</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsA"
+                            placeholder="0"
+                            name="elementsA"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsB" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en el conjunto
+                            <span class="nameSetB">B</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsB"
+                            placeholder="0"
+                            name="elementsB"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsC" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en el conjunto
+                            <span class="nameSetC">C</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsC"
+                            placeholder="0"
+                            name="elementsC"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsAB" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en los conjuntos
+                            <span class="nameSetA">A</span> y
+                            <span class="nameSetB">B</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsAB"
+                            placeholder="0"
+                            name="elementsAB"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsAC" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en los conjuntos
+                            <span class="nameSetA">A</span> y
+                            <span class="nameSetC">C</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsAC"
+                            placeholder="0"
+                            name="elementsAC"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsBC" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en los conjuntos
+                            <span class="nameSetB">B</span> y
+                            <span class="nameSetC">C</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsBC"
+                            placeholder="0"
+                            name="elementsBC"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsABC" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en los conjuntos
+                            <span class="nameSetA">A</span>,
+                            <span class="nameSetB">B</span> y
+                            <span class="nameSetC">C</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsABC"
+                            placeholder="0"
+                            name="elementsABC"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="elementsNotABC" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos no hay en los conjuntos
+                            <span class="nameSetA">A</span>,
+                            <span class="nameSetB">B</span> y
+                            <span class="nameSetC">C</span>?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="elementsNotABC"
+                            placeholder="0"
+                            name="elementsNotABC"
+                            min="0"
+                        >
+                    </label>
+
+                    <label for="sample" class="calculator--container__content--field">
+                        <span class="calculator--container__content--label">
+                            ¿Cuantos elementos hay en la muestra?
+                        </span>
+                        <input
+                            type="number"
+                            class="calculator--container__content--input input-number"
+                            id="sample"
+                            placeholder="0"
+                            name="sample"
+                            min="0"
+                        >
+                    </label>
+                </fieldset>
             </form>
             <section id="calculator__formula" class="calculator--container">
                 <span>Aquí se establece la formula a operar entre los conjuntos en el diagrama de Venn-Euler</span>

@@ -86,3 +86,7 @@ html {
 .calculator--container__content--input {
     font-size: 11pt;
 }
+
+.input-number {
+    width: 4rem;
+}
