@@ -90,3 +90,8 @@ html {
 .input-number {
     width: 4rem;
 }
+
+.calculator--button {
+    flex: 1;
+    font-size: 11pt;
+}
