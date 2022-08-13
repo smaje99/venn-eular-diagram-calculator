@@ -81,6 +81,10 @@ html {
     flex: 1;
 }
 
+.calculator--container__content--input:disabled {
+    color: #fff;
+}
+
 .calculator--container__content--legend,
 .calculator--container__content--label,
 .calculator--container__content--input {

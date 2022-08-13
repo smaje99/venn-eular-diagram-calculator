@@ -13,3 +13,7 @@ export const validateTotalityInput = (notABC, sample) => {
         sample.disabled = false;
     }
 }
+
+export const validateInputValues = inputs => (
+    Array.from(inputs).some(input => input.value)
+)
