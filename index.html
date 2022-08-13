@@ -175,16 +175,21 @@
                 </fieldset>
             </form>
             <section id="calculator__formula" class="calculator--container">
-                <span>Aquí se establece la formula a operar entre los conjuntos en el diagrama de Venn-Euler</span>
+                <fieldset class="calculator--operation__content">
+                    <legend class="calculator--container__content--legend">Operaciones entre conjuntos</legend>
+
+                    <label for="AUB" class="calculator--container__content--field">
+                        <input type="checkbox" name="AUB" id="AUB" class="operations" disabled>
+                        <span class="calculator--container__content--label">A &cup; B</span>
+                    </label>
+
+                </fieldset>
             </section>
         </section>
 
         <section class="diagram" id="diagram">
-
             <canvas id="myChart">
-
             </canvas>
-
         </section>
 
         <section class="calculator results__content">

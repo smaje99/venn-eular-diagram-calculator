@@ -30,13 +30,14 @@ body {
 }
 
 .app {
-    height: calc(100vh - 44px);
+    height: calc(100vh - 72px);
     display: grid;
     place-content: center;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
     background-color: #ced6e0;
+    padding-top: 2.8rem;
 }
 
 .calculator {
@@ -132,28 +133,37 @@ body {
     align-self: center;
 }
 
+.calculator--operation__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 /* estilos diagram de venn */
-  #myChart{
-    width: 500px;
-    height: 500px;
+#myChart {
+    width: 60rem;
+    height: 60rem;
     border-radius: 5px;
-    border: 2px solid blue;
-    background: white;
-    margin-left: 10px;
-  }
-  .chartCard {
+    border: 2px solid #5352ed;
+    background: #f1f2f6;
+    padding: 2rem;
+    box-shadow: .4rem 1.2rem 3.2rem 2rem rgba( 31, 38, 135, 0.37 );
+}
+
+.chartCard {
     width: 500px;
     height: calc(100vh - 40px);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .chartBox {
+.chartBox {
     width: 400px;
     padding: 10px;
     border-radius: 20px;
     border:black;
     background: rgb(255, 254, 255);
-  }
-
+}
