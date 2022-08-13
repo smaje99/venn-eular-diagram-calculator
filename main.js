@@ -17,4 +17,4 @@ sampleElement.addEventListener('input', () => (
     validateTotalityInput(notABCElement, sampleElement)
 ));
 
-buildDiagram(diagramElement);
+window.onload = () => buildDiagram(diagramElement);
