@@ -105,6 +105,7 @@ body {
     font-size: 11pt;
 }
 
+
 .diagram {
     grid-column: 2 / span 1;
 }
@@ -130,3 +131,29 @@ body {
     grid-row: 1 / span 2;
     align-self: center;
 }
+
+/* estilos diagram de venn */
+  #myChart{
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    background: white;
+    margin-left: 10px;
+  }
+  .chartCard {
+    width: 500px;
+    height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chartBox {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border:black;
+    background: rgb(255, 254, 255);
+  }
+
