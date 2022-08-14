@@ -8,34 +8,12 @@ const dataDefault = ChartVenn.extractSets([
     { label:'C', values:[] }
 ])
 
-    // config 
-    let config = {
-      type: 'venn',
-      data,
-      options: {
-        borderColor: [
-            '#3742fa',
-            '#3742fa',
-            '#3742fa',
-            '#3742fa',
-            '#3742fa',
-            '#3742fa',
-            '#3742fa'
-        ],backgroundColor: [
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 255, 255, 0.2)',
-            'rgba(255, 255, 255, 0.2)',
-            'rgba(255, 255, 255, 0.2)',
-            'rgba(255, 255, 255, 0.2)',
-            'rgba(255, 255, 255, 0.2)'
-        ]
-      }
-    };
+
 
 
 
 const borderColor = [
+
 
     '#3742fa',
     '#3742fa',
@@ -47,7 +25,14 @@ const borderColor = [
 
 ]
 
-
+// config
+let config = {
+    type: 'venn',
+    data: dataDefault,
+    options: {
+        borderColor
+    }
+};
 
 const setBackgroundColor = (backgroundColor) => {
     config = { options: { borderColor, backgroundColor } , ...config}
