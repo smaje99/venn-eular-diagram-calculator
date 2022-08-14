@@ -212,9 +212,53 @@
             </section>
         </section>
 
-        <section class="diagram" id="diagram">
-            <canvas id="myChart">
-            </canvas>
+        <section class="calculator calculator-result">
+            <section class="calculator--container calculator-result--container">
+                <div class="calculator--container__content--field calculator-result--field">
+                    <span class="calculator--container__content--label">A</span>
+                    <span class="calculator--container__content--label set-results" id="onlyA"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">B</span>
+                    <span class="calculator--container__content--label set-results" id="onlyB"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">C</span>
+                    <span class="calculator--container__content--label set-results" id="onlyC"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">A &cup; B</span>
+                    <span class="calculator--container__content--label set-results" id="AB"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">A &cup; C</span>
+                    <span class="calculator--container__content--label set-results" id="AC"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">B &cup; C</span>
+                    <span class="calculator--container__content--label set-results" id="BC"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">A &cup; B &cup; C</span>
+                    <span class="calculator--container__content--label set-results" id="ABC"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">(A &cup; B &cup; C)'</span>
+                    <span class="calculator--container__content--label set-results" id="notABC"></span>
+                </div>
+
+                <div class="calculator--container__content--field">
+                    <span class="calculator--container__content--label">U</span>
+                    <span class="calculator--container__content--label set-results" id="universal"></span>
+                </div>
+            </section>
         </section>
 
         <section class="calculator results__content">

@@ -168,6 +168,10 @@ body {
     background: rgb(255, 254, 255);
 }
 
-.result-data{
-    color: white;
+.calculator-result {
+    width: 50rem;
+}
+
+.calculator-result--container {
+    justify-content: flex-start !important;
 }

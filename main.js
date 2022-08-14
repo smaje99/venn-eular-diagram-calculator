@@ -2,7 +2,6 @@ import 'normalize.css';
 import './style.css';
 
 import { calculatorSets } from './calculator';
-import { buildDiagram, setData } from './diagram';
 import { validateTotalityInput, validateInputValues } from './validate/validate-input';
 import { $, $$ } from './utils/dom';
 
@@ -11,6 +10,9 @@ const sampleElement = $('#sample');
 const calculatorElement = $('#calculator__diagram');
 const calculatorInputs = $$('.calculator--container__content--input');
 const calculatorSubmitElement = $('#calculator-set-submit');
+const setResults = $$('.set-results');
+
+let data = null;
 
 notABCElement.addEventListener('input', () => (
     validateTotalityInput(notABCElement, sampleElement)
@@ -29,8 +31,10 @@ calculatorElement.addEventListener('submit', e => {
 
     if (calculatorSubmitElement.value === 'Calcular conjunto') {
         const formData = new FormData(document.calculator);
-        const data = calculatorSets(formData);
-        setData(data);
+        data = calculatorSets(formData);
+        setResults.forEach(set => {
+            set.innerText = ` = ${data[set.id]}`
+        });
 
         calculatorInputs.forEach(input => input.disabled = true);
 
@@ -44,8 +48,10 @@ calculatorElement.addEventListener('submit', e => {
             input.disabled = false;
         });
 
+        setResults.forEach(set => set.innerText = '');
+
+        data = null;
+
         calculatorSubmitElement.value = 'Calcular conjunto';
     }
 });
-
-window.onload = () => buildDiagram();
