@@ -1,6 +1,9 @@
 import { $ } from './utils/dom';
 
 // setup
+const ctx = $('#myChart').getContext('2d');
+let chart = null
+
 const dataDefault = ChartVenn.extractSets([
     { label:'A', values:[] },
     { label:'B', values:[] },
@@ -27,14 +30,43 @@ let config = {
 };
 
 const setBackgroundColor = (backgroundColor) => {
-    config = { options: { borderColor, backgroundColor } , ...config}
-    buildDiagram($('#myChart'))
+    config = { options: { borderColor, backgroundColor } , ...config};
+    buildDiagram();
 }
 
+export const cleanData = () => {
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
 
-export function buildDiagram(canvas){
-    const ctx = canvas.getContext('2d');
-    return new Chart(ctx, config);
+export const setData = (data) => {
+    cleanData();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push([
+            { sets: ['A'], value: data.onlyA },
+            { sets: ['B'], value: data.onlyB },
+            { sets: ['C'], value: data.onlyC },
+            { sets: ['A', 'B'], value: data.AB },
+            { sets: ['A', 'C'], value: data.AC },
+            { sets: ['B', 'C'], value: data.BC },
+            { sets: ['A', 'B', 'C'], value: data.ABC }
+            // { sets: [], value: data.notABC}
+        ]);
+    });
+    chart.update();
+}
+
+export function buildDiagram(){
+    if (!!chart) {
+        chart.destroy();
+        ctx.restore();
+    }
+
+    ctx.save();
+    chart = new Chart(ctx, config);
+    ctx.restore();
 }
 
 export const AUnionB = () => {
