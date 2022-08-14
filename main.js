@@ -1,7 +1,7 @@
 import 'normalize.css';
 import './style.css';
 
-import { calculatorSets } from './calculator';
+import { calculatorSets, operations } from './calculator';
 import { validateTotalityInput, validateInputValues } from './validate/validate-input';
 import { $, $$ } from './utils/dom';
 
@@ -11,6 +11,10 @@ const calculatorElement = $('#calculator__diagram');
 const calculatorInputs = $$('.calculator--container__content--input');
 const calculatorSubmitElement = $('#calculator-set-submit');
 const setResults = $$('.set-results');
+const operationsElements = $$('.operations');
+const resultLabelElement = $('.results__content--label');
+const operationElement = $('#operation');
+const valuesElement = $('#values');
 
 let data = null;
 
@@ -37,6 +41,7 @@ calculatorElement.addEventListener('submit', e => {
         });
 
         calculatorInputs.forEach(input => input.disabled = true);
+        operationsElements.forEach(operation => operation.disabled = false);
 
         notABCElement.value ||= results.notABC;
         sampleElement.value ||= results.universal;
@@ -48,6 +53,11 @@ calculatorElement.addEventListener('submit', e => {
             input.disabled = false;
         });
 
+        operationsElements.forEach(operation => {
+            operation.disabled = true
+            operation.checked = false;
+        });
+
         setResults.forEach(set => set.innerText = '');
 
         data = null;
@@ -55,3 +65,22 @@ calculatorElement.addEventListener('submit', e => {
         calculatorSubmitElement.value = 'Calcular conjunto';
     }
 });
+
+operationsElements.forEach(operation => {
+    operation.addEventListener('change', e => {
+        if (e.target.checked) {
+            resultLabelElement.style.visibility = 'visible';
+            operationElement.innerText = `${e.target.name}`;
+            valuesElement.innerText = `${operations[e.target.id](data)}`;
+
+            operationsElements.forEach(oe => {
+                if (oe.id !== e.target.id) {
+                    oe.disabled = true
+                }
+            });
+        } else {
+            resultLabelElement.style.visibility = 'hidden';
+            operationsElements.forEach(oe => oe.disabled = false);
+        }
+    })
+})

@@ -19,3 +19,12 @@ export const calculatorSets = data => {
 
     return { onlyA, onlyB, onlyC, AB, AC, BC, ABC, notABC, universal };
 }
+
+export const operations = {
+    'AUB': (data) => data.onlyA + data.onlyB + data.AB + data.AC + data.BC + data.ABC,
+    'AnB': (data) => data.AB + data.ABC,
+    'AnC': (data) => data.AC + data.ABC,
+    'A-BUC': (data) => data.onlyA,
+    'A△C-B': (data) => data.onlyA + data.onlyC,
+    'AUBUC': (data) => data.onlyA + data.onlyB + data.onlyC + data.AB + data.AC + data.BC + data.ABC
+}
