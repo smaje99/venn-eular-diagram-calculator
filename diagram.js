@@ -168,7 +168,7 @@ export const AunionBunionC = () => {
         'rgba(54, 162, 235, 0.2)']
     setBackgroundColor(backgroundColor);
 }
-export const AdiferenciasimetricBCmenosB= () => {
+export const AdiferenciasimetricCmenosB= () => {
     const backgroundColor = [
 
         'rgba(54, 162, 235, 0.2)',
